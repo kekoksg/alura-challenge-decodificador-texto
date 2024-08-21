@@ -1,0 +1,328 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F2F5F8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo-wrapper {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo-alura {
+    width: 120px;
+    height: 48px;
+}
+
+.panel-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-panel, .right-panel {
+    padding: 30px;
+}
+
+.left-panel {
+    flex: 3;
+    background-color: transparent;
+    margin-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+    height: 100%;
+    min-height: 80vh;
+}
+
+#main-text {
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    max-height: 944px;
+    background: none;
+    color: #0A3871;
+    border-style: none;
+    outline: none;
+    resize: none;
+
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+#main-text::placeholder {
+    color: #0A3871;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+.alert img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.alert span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-copy, .btn-decrypt, .btn-encrypt {
+    border: solid 1px #0A3871;
+    border-radius: 24px;
+    max-width: 328px;
+    width: 100%;
+    min-height: 67px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-encrypt {
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+.btn-decrypt {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+.encrypted-text {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.encrypted-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #495057;
+    margin: 0;
+}
+
+.btn-copy {
+    background-color: transparent;
+    color: #0A3871;
+}
+
+.no-message {
+    text-align: center;
+}
+
+.no-message img {
+    max-width: 336px;
+    width: 100%;
+    max-height: 304px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.no-message-title {
+    font-size: 18px;
+    color: #343A40;
+    margin-bottom: 10px;
+}
+
+.no-message p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #495057;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        height: 80%;
+    }
+
+    .logo-wrapper {
+        top: 73.42px;
+    }
+
+    .logo-alura {
+        width: 31.09px;
+        height: 50.58px;
+    }
+
+    .panel-wrapper {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .encrypted-text {
+        max-height: none;
+        gap: 20px;
+    }
+
+    .right-panel {
+        display: block;
+        min-height: auto;
+        align-content: center;
+        flex: none;
+        height: auto;
+        padding: 32px;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+
+    .no-message-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        line-height: 28.8px;
+        font-weight: 700;
+    }
+
+    .no-message p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .btn-copy {
+        max-width: none;
+    }
+
+    #no-message-found {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        height: auto;
+    }
+    .container {
+        height: 100%;
+    }
+
+    #main-text {
+        min-height: 314px;
+    }
+
+    .logo-wrapper {
+        top: 24px;
+        left: 16px;
+    }
+
+    .logo-alura {
+        width: 32px;
+        height: 48px;
+    }
+
+    .panel-wrapper {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        padding: 5px;
+    }
+
+    .left-panel {
+        margin-top: 8rem;
+    }
+
+    .right-panel {
+        display: block;
+        min-height: auto;
+        align-content: center;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+
+    .no-message-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+    }
+
+    .buttons {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    #no-message-found {
+        display: none;
+    }
+
+    .encrypted-text {
+        width: auto;
+        padding: 32px;
+        gap: 32px;
+    }
+
+    .encrypted-text p {
+        word-break: break-all;
+    }
+
+    .btn-copy, .btn-decrypt, .btn-encrypt {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        text-align: center;
+    }
+}
